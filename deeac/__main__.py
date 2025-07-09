@@ -20,7 +20,7 @@ from deeac.adapters.eeac_tree.json import JSONTreeParser
 from deeac.domain.exceptions import DEEACException
 from deeac.services import NetworkLoader, EEACTreeLoader
 from deeac.__parallel__ import run_parallel_fault, run_fault_from_args
-from .parsing_lib import parse
+from deeac.parsing_lib import parse
 
 
 def deeac(argv):
@@ -187,4 +187,13 @@ def deeac(argv):
 
 
 if __name__ == "__main__":
+    sys.argv = ["python",
+                "-e", "C:\\Users\\eroot\\Github\\extended-equal-area-criterion\\examples\\eurostag_cases\\case_4---pst\\fech.ech",
+                "-d", "C:\\Users\\eroot\\Github\\extended-equal-area-criterion\\examples\\eurostag_cases\\case_4---pst\\fdta.dta",
+                "-l", "C:\\Users\\eroot\\Github\\extended-equal-area-criterion\\examples\\eurostag_cases\\case_4---pst\\fech.lf",
+                "-s", "C:\\Users\\eroot\\Github\\extended-equal-area-criterion\\examples\\eurostag_cases\\case_4---pst\\B-C_fault.seq",
+                "-t", "C:\\Users\\eroot\\Github\\extended-equal-area-criterion\\examples\\eurostag_cases\\case_4---pst\\branch_1.json",
+                "-o", "C:\\Users\\eroot\\Github\\extended-equal-area-criterion\\examples\\eurostag_cases\\case_4---pst\\testing_results"  ,
+                "-v"]
+
     deeac(sys.argv[1:])

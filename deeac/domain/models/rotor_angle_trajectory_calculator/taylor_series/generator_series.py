@@ -18,6 +18,7 @@ from deeac.domain.models.rotor_angle_trajectory_calculator import (
 )
 from deeac.domain.exceptions import GeneratorInertiaException
 
+#TODO: Algorithm A11
 
 class GeneratorTaylorSeries(GeneratorRotorAnglesTrajectoryCalculator):
     """
